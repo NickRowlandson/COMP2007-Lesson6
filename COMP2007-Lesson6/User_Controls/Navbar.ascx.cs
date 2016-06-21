@@ -16,7 +16,7 @@ namespace COMP2007_Lesson6
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SetActivePage();
+            addActiveClass();
         }
 
         /**
@@ -24,29 +24,17 @@ namespace COMP2007_Lesson6
          * in navigation links
          * 
          * @private
-         * @method SetActivePage
-         * @return {void}
+         * @method addActiveClass
+         * @return {string}
          */
-        private void SetActivePage()
+        private string addActiveClass()
         {
-            switch (Page.Title)
+            Object activeNode = (System.Web.UI.HtmlControls.HtmlGenericControl)FindControl(Page.Title.ToString().ToLower().Replace(" ", String.Empty));
+            if (activeNode != null)
             {
-                case "Home":
-                    home.Attributes.Add("class", "active");
-                    break;
-                case "Students":
-                    students.Attributes.Add("class", "active");
-                    break;
-                case "Courses":
-                    courses.Attributes.Add("class", "active");
-                    break;
-                case "Departments":
-                    departments.Attributes.Add("class", "active");
-                    break;
-                case "Contact":
-                    contact.Attributes.Add("class", "active");
-                    break;
+                ((System.Web.UI.HtmlControls.HtmlGenericControl)activeNode).Attributes.Add("class", "active");
             }
-        }
+            return (Page.Title.ToString().ToLower().Replace(" ", String.Empty));
+        }   
     }
 }
