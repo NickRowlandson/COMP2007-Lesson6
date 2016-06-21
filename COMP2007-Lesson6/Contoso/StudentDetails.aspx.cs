@@ -82,14 +82,14 @@ namespace COMP2007_Lesson6
                 db.SaveChanges();
 
                 // redirect back to the updated students page
-                Response.Redirect("~/Students.aspx");
+                Response.Redirect("~/Contoso/Students.aspx");
             }
         }
 
         protected void CancelButton_Click(object sender, EventArgs e)
         {
             // Redirect back to Students page
-            Response.Redirect("~/Students.aspx");
+            Response.Redirect("~/Contoso/Students.aspx");
         }
     }
 }

@@ -53,7 +53,7 @@ namespace COMP2007_Lesson6
                 authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
 
                 // redirect to the MainMenu page
-                Response.Redirect("~/MainMenu.aspx");
+                Response.Redirect("~/Contoso/MainMenu.aspx");
             }
             else
             {

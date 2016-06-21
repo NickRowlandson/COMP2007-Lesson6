@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
                 <h1>Department List</h1>
-                <a href="DepartmentDetails.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add Department</a>
+                <a href="/Contoso/DepartmentDetails.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add Department</a>
 
                 <div>
                     <label for="PageSizeDropDownList">Records per page:</label>
@@ -25,7 +25,7 @@
                         <asp:BoundField DataField="DepartmentID" HeaderText="Department ID" Visible="true" SortExpression="DepartmentID"/>
                         <asp:BoundField DataField="Name" HeaderText="Department Name" Visible="true" SortExpression="Name"/>
                         <asp:BoundField DataField="Budget" DataFormatString="{0:c}" HeaderText="Budget" Visible="true" SortExpression="Budget"/>
-                        <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'></i> Edit" NavigateUrl="~/DepartmentDetails.aspx.cs"
+                        <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'></i> Edit" NavigateUrl="~/Contoso/DepartmentDetails.aspx.cs"
                             runat="server" ControlStyle-CssClass="btn btn-primary btn-sm" DataNavigateUrlFields="DepartmentID" DataNavigateUrlFormatString="DepartmentDetails.aspx?DepartmentID={0}"/>
                         <asp:CommandField HeaderText="Delete" DeleteText="<i class='fa fa-trash-o fa-lg'></i> Delete" ShowDeleteButton="true" ButtonType="Link" 
                             ControlStyle-CssClass="btn btn-danger btn-sm delete" />

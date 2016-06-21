@@ -46,7 +46,7 @@ namespace COMP2007_Lesson6
         protected void CancelButton_Click(object sender, EventArgs e)
         {
             // Redirect back to department page
-            Response.Redirect("~/Departments.aspx");
+            Response.Redirect("~/Contoso/Departments.aspx");
         }
 
         protected void SaveButton_Click(object sender, EventArgs e)
@@ -86,7 +86,7 @@ namespace COMP2007_Lesson6
                 db.SaveChanges();
 
                 // redirect back to the updated departments page
-                Response.Redirect("~/Departments.aspx");
+                Response.Redirect("~/Contoso/Departments.aspx");
             }
         }
     }
